@@ -31,28 +31,44 @@ console.log(integers())
 // write a function that returns a new array of employee objects sorted by their salary in ascending order.
 
 function sortEmployeeDetails (employeeDetails){
-   return employeeDetails.sort((a,b) => (a>b))
+
+    employeeDetails= [{id:5,employeeName:"Ann Hailey",salary:40000},
+        {id:6,employeeName:"Sam Kembo",salary:20000},
+        {id:7,employeeName:"Kelly Rowland",salary:60000},
+        {id:8,employeeName:"Alice Keys",salary:15000}]
+
+   return employeeDetails.sort((a,b) => (a.salary-b.salary))
 
 
 }
 
-let employees = [{}]
+ 
+console.log(sortEmployeeDetails())
 
 //Write a function that accepts an array of numbers and uses the forEach() method to console.log each number multiplied by 2.
 function arrNums (arr4){
-   
-   return  arr4.forEach(num => num*num)
- 
+   arr4= [10,20,30,40]
+   arr5 = []
+   arr4.forEach(function(num) {
+    arr5.push(num*2)
+       
+   });
      
-}
+return arr5}
+ console.log(arrNums())
 
-
-
-console.log(arrNums([10,20,30,40]))
 //Write a function that takes in an array of numbers and consoles the first four items multiplied by 8 and the last two added by 5.
 //  Console the array with the new values
 
 const manipulateData = (data) =>{
-        const manipulatedData = []
 
+    for(let i=0; i<4 && i<data.length;i++){
+        data[i] *=8
+    }
+    for(let i=data.length-2;i<data.length;i++){
+        data[i] +=5
+    }
+  return data
 }
+
+console.log(manipulateData([10,20,30,40,50,60,60,70,80,90,100]))
