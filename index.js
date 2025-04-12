@@ -13,13 +13,13 @@ arrangeElements(["red","yellow","green","blue","orange"])
 const integers = (arrNumbers)  => {
 
     arrNumbers = [10,20,0,-20,0,60,-45,-56,0]
-     return arrNumbers.map((num,index) =>{
+     return arrNumbers.map((num) =>{
      if (num>0){
-        return `${index} is positive`
+        return `${num} is positive`
      }else if(num<0){
-        return `${index} is negative`
+        return `${num} is negative`
      } else{
-        return `${index} is zero`
+        return `${num} is zero`
      }});
 
 }
@@ -37,7 +37,7 @@ function sortEmployeeDetails (employeeDetails){
         {id:7,employeeName:"Kelly Rowland",salary:60000},
         {id:8,employeeName:"Alice Keys",salary:15000}]
 
-   return employeeDetails.sort((a,b) => (a.salary-b.salary))
+        return employeeDetails.sort((a,b) => (a.salary-b.salary))   
 
 
 }
